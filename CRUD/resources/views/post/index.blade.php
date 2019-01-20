@@ -10,6 +10,10 @@ This is the side menu
 @endsection
 
 @section('content')
-This is my body content.
-<h1>Hello I'm inside the container</h1>
+  @foreach ($post as $post)
+    <a href="/post/title" class="nav-link">
+      <h1>Title of Post</h1>
+    </a>
+    <p>Paragraph</p>
+  @endforeach
 @endsection

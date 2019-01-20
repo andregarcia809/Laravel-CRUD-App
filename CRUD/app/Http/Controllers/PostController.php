@@ -14,7 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('pages/child');
+        $post = [1,2,3,4,5,7,8];
+        return view('post/index', compact('post'));
     }
 
     /**
@@ -24,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return 'Create Page';
+        return view('post/create');
     }
 
     /**
@@ -46,7 +47,7 @@ class PostController extends Controller
      */
     public function show(Post $post, $title)
     {
-        return "Show ${title} Page";
+        return view('post/show');
     }
 
     /**
@@ -57,7 +58,7 @@ class PostController extends Controller
      */
     public function edit(Post $post, $title)
     {
-        return 'Page Page';
+        return view('post/edit');
     }
 
     /**
